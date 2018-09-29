@@ -319,6 +319,7 @@ namespace {
           in >> s_count_type >> s_type >> s_name;
           if (!in.fail()) {
             name = s_name;
+            if (name == "vertex_index") name = "vertex_indices";
             count_type = strtype(s_count_type);
             type = strtype(s_type);
             is_list = true;
